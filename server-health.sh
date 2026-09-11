@@ -1,9 +1,13 @@
 
 #!/bin/bash
 
+log_file="server-health.log"
+
 echo "==============================="
 echo "   LINUX SERVER HEALTH CHECK"
 echo "==============================="
+
+echo "Check Time: $(date)"
 
 echo "Hostname"
       hostname
@@ -51,3 +55,5 @@ if(( $(echo "$cpu_usage > 80" | bc -l) )); then
 else
 	echo "CPU Status: OK"
 fi
+echo "$(date) | Memory: $memory_usage% | Disk: $disk_usage% | CPU: $cpu_usage%" >> "$log_file"
+echo "-------------------------------------------------------------" >> "$log_file"
