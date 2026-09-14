@@ -1,7 +1,7 @@
 
 #!/bin/bash
 
-log_file="server-health.log"
+log_file="logs/server-health.log"
 
 echo "==============================="
 echo "   LINUX SERVER HEALTH CHECK"
