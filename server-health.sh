@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 log_file="logs/server-health.log"
