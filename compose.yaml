@@ -1,0 +1,6 @@
+services:
+  server-monitor:
+    build: .
+    container_name: server-monitor
+    volumes:
+      - ./logs:/app/logs
